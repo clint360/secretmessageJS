@@ -17,7 +17,7 @@ form.addEventListener("submit", (e) => {
   } else {
     const normalized1 = sentence.replace(/[.,"'<>?"" """[ \/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, "");
     const normalized = normalized1.toLowerCase();
-    let arrOfNormalized = normalized.match(/.{1,6}/g);
+    let arrOfNormalized = normalized.match(/.{1,8}/g);
     displayArr(arrOfNormalized, normText)
    
    encodeButton.addEventListener("click", () => {
@@ -31,7 +31,7 @@ form.addEventListener("submit", (e) => {
    let encodedString = encodedString1.replaceAll(",","");
    enChunks.textContent = encodedString
    let n = arrOfNormalized.length;
-   let arrOfEncoded = encodedString.match(/.{1,8}/g);
+   let arrOfEncoded = encodedString.match(/.{1,6}/g);
    displayArr(arrOfEncoded, enMessage);
   })
   }})
@@ -42,3 +42,5 @@ function displayArr (arr, mode) {
     mode.innerHTML += '"' + arr[i] + '"'+ "<br>"; 
   }
 }
+
+
