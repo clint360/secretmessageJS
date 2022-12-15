@@ -6,6 +6,8 @@ let encodeButton = document.querySelector('#encode')
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  normText.textContent = ''
+  normText.style.color = "white"
   let sentence = e.target.sentenceI.value;
    console.log(sentence.length)
   if (sentence.length < 50) {
@@ -13,7 +15,7 @@ form.addEventListener("submit", (e) => {
     normText.textContent = 'Error: Input 50 chars min';
     normText.style.color = "red"
   } else {
-    const normalized1 = sentence.replace(/[.," "\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, " ");
+    const normalized1 = sentence.replace(/[.,"'<>?"" """[ \/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s{2,}/g, "");
     const normalized = normalized1.toLowerCase();
     let arrOfNormalized = normalized.match(/.{1,6}/g);
     displayArr(arrOfNormalized, normText)
@@ -28,7 +30,8 @@ form.addEventListener("submit", (e) => {
    let encodedString1 = String(encodedArr)
    let encodedString = encodedString1.replaceAll(",","");
    enChunks.textContent = encodedString
-   let arrOfEncoded = encodedString.match(/.{1,6}/g);
+   let n = arrOfNormalized.length;
+   let arrOfEncoded = encodedString.match(/.{1,8}/g);
    displayArr(arrOfEncoded, enMessage);
   })
   }})
