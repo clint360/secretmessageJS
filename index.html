@@ -9,17 +9,20 @@
 </head>
 <body>
   <section id="forinput">
-    <form action="">
-      <input type="text" placeholder="Please Input Sentence" spellcheck="true" class="setenceinput" name="sentence">
+    <form action="" id="form">
+      <input type="text" placeholder="Please Input Sentence" spellcheck="true" class="sentenceinput" name="sentence">
       <button type="submit" class="submitbutton">Submit</button>
     </form>
     <br>
   </section>
   <section id="allresults">
-  <div class="show"></div>
-  <button>Encode</button>
-  <div class="show"></div>
-  <div class="show"></div>
+    <legend>Normalized Text:</legend>
+  <div class="show"></div><br>
+  <div class="buttoncontainer"><button class="encode" id="encode">Encode</button><br><br></div>
+  <legend>Encoded Chunks:</legend>
+  <div class="show"></div><br>
+  <legend>Encoded Message:</legend>
+  <div class="show"></div><br>
   </section>
 </body>
 </html>
