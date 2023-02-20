@@ -1,0 +1,96 @@
+ * {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 18px;
+  font-family:'Lucida Sans Unicode';
+}
+
+body {
+  box-sizing: border-box;
+  background: radial-gradient(rgba(14, 16, 24, 0.822), rgb(0, 0, 0)), url('../images/background.jpg');
+}
+
+#intro p{
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#form {
+  padding: 20px 0;
+  margin: auto;
+  display: flex;
+  width: 90%;
+}
+
+.sentenceinput {
+  width: 100%;
+  padding: 10px;
+  margin-right: 5px;
+  background: #000;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.submitbutton {
+  padding: 10px;
+}
+
+.show {
+  border-radius: 5px;
+  margin: auto;
+  height: 150px;
+  width: 90%;
+  background: #000;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.encode {
+  padding: 10px;
+  width: 100%;
+}
+
+.buttoncontainer {
+  width: 15%;
+  margin: auto;
+}
+
+button {
+  background: rgb(26, 21, 44);
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: rgb(64, 55, 97);
+}
+
+legend {
+  padding-left: 5%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.158);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
